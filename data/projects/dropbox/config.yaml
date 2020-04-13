@@ -1,0 +1,30 @@
+
+scm:
+    type: git
+    repository: https://github.com/barbearclassico/nci-ansible-ui-sample-playbook.git
+    rev: testing
+
+#notify when build fails or build status changes (according to previous status)
+#to use email notification notify.mail section in server config should be
+#configured
+
+# notify:
+#     on:
+#         - error
+#         - change
+#     to:
+#         mail:
+#             - your_mail@example.com
+
+#some shell steps before run playbook with inventories
+steps:
+    - name: Some action before playbooks
+      cmd: echo "do something"
+
+playbooks:
+    - name: install dropbox
+      path: playbooks/dropbox.yaml
+      inventories:
+          - name: sample
+            path: inventories/staging.yaml
+
