@@ -25,6 +25,8 @@ playbooks:
     - name: install dropbox
       path: playbooks/dropbox.yaml
       inventories:
-          - name: sample
+          - name: dev
+            path: inventories/staging.yaml
+          - name: all
             path: inventories/staging.yaml
 
