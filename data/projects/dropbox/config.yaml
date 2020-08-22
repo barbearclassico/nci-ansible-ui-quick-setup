@@ -30,3 +30,9 @@ playbooks:
           - name: all
             path: inventories/staging.yaml
 
+    - name: Deploy docs.barbearclassico.com
+      path: playbooks/docs-bc.yaml
+      inventories:
+          - name: dev
+            path: inventories/staging.yaml
+
