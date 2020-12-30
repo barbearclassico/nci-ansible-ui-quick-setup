@@ -28,7 +28,7 @@ playbooks:
           - name: dev
             path: staging.yaml
 
-    - name: Deploy docs.barbearclassico.com
+    - name: install users and firewall
       path: playbooks/security-firewall.yaml
       inventories:
           - name: dev
